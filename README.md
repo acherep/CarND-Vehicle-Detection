@@ -86,7 +86,9 @@ The resulting bounding boxes are drawn onto the last frame in the series:
 
 # Video Implementation. Filter false positives and combining overlapping bounding boxes.
 
-Here's a [link to my video result](./project_video_output.mp4)
+<img src="./project_video_output.gif" width="400">
+
+Here's a [link to my video result](./project_video_output.mp4).
 
 I recorded the positions of positive detections in each frame of the video. From the positive detections I created a heatmap and then thresholded that map to identify vehicle positions. I then used `scipy.ndimage.measurements.label()` to identify individual blobs in the heatmap. I then assumed each blob corresponded to a vehicle. I constructed bounding boxes to cover the area of each blob detected. The corresponding implementation is in cell 5, in particular, function `process_image()`.
 
